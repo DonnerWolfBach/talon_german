@@ -13,7 +13,16 @@ mod = Module()
 
 # NOTE: This method requires this module to be one folder below the top-level
 #   community folder.
-SETTINGS_DIR: Path = Path(__file__).parents[2] / "community" / "settings"
+# SETTINGS_DIR: Path = Path(__file__).parents[2] / "community" / "settings"
+
+# NOte: this is the modification for having it in plugin
+SETTINGS_DIR: Path = Path(__file__).parents[2] / "settings"
+
+
+
+print("----")
+print(Path(__file__))
+print(SETTINGS_DIR)
 
 if not SETTINGS_DIR.is_dir():
     os.mkdir(SETTINGS_DIR)
