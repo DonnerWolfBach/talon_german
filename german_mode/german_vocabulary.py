@@ -15,14 +15,15 @@ mod = Module()
 #   community folder.
 # SETTINGS_DIR: Path = Path(__file__).parents[2] / "community" / "settings"
 
-# NOte: this is the modification for having it in plugin
-SETTINGS_DIR: Path = Path(__file__).parents[2] / "settings"
+# NOTE: this is the modification for having it in plugin
+# 
+SETTINGS_DIR: Path = Path(__file__).parents[3] / "settings"
 
 
 
 print("----")
-print(Path(__file__))
-print(SETTINGS_DIR)
+print(f"{Path(__file__)=}")
+print(f"{SETTINGS_DIR=}")
 
 if not SETTINGS_DIR.is_dir():
     os.mkdir(SETTINGS_DIR)
